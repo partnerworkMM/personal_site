@@ -9,7 +9,7 @@ const {PORT = 4000} = process.env
 client.connect()
 
 server.use(express.json())
-server.use(morgan.json())
+server.use(morgan('dev'))
 
 server.use('/',express.static(path.join(__dirname, '../build')))
 

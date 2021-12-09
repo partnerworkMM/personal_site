@@ -21,6 +21,19 @@ async function createSite({creator,name,description,link,githublink,image}){
     }
 }
 
+async function getSitesByCreator(creatorName){
+    try {
+        const {rows: [sites]} = await client.query(`
+        SELECT * FROM sites
+        WHERE creator = $1
+        `, [creatorName])
+        return sites
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
-    createSite
+    createSite,
+    getSitesByCreator
 }
