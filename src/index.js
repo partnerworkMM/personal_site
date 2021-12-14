@@ -1,18 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route,BrowserRouter as Router,Routes} from "react-router-dom";
-import Test from "./components/test"
+import Home from "./home"
 import MasonHome from "./mason/masonhome"
 import MikaelaHome from "./mikaela/mikaelahome"
-
-// ReactDOM.render(
-//     <Router>
-//         <Routes>
-//             <Route path="/" component={Test}/>
-//         </Routes>
-//     </Router>,
-//     document.getElementById("root")
-// )
 
 const App = ()=>{
     return(
@@ -20,7 +11,7 @@ const App = ()=>{
             <h1>hang in there!</h1>
                 <Router>
                     <Routes>
-                        <Route exact path = "/" element={<Test/>}/>
+                        <Route exact path = "/" element={<Home/>}/>
                         <Route path="/mason" element={<MasonHome/>}/>
                         <Route path="/mikaela" element={<MikaelaHome/>}/>
                     </Routes>

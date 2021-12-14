@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react"
 import {BrowserRouter as Router,Route,Link, Redirect} from "react-router-dom"
 import axios from "axios"
 
-function Test(){
+function Home(){
     const[masonTestData,setMasonTestData]=useState({})
 
     useEffect(()=>{
@@ -26,4 +26,4 @@ function Test(){
     )
 }
 
-export default Test
+export default Home
