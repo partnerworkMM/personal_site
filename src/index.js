@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route,BrowserRouter as Router,Routes} from "react-router-dom";
-import Test from "./components/test"
+import MasonHome from "./mason/masonhome"
+import MikaelaHome from "./mikaela/mikaelahome"
 
 // ReactDOM.render(
 //     <Router>
@@ -18,7 +19,8 @@ const App = ()=>{
             <h1>hang in there!</h1>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<Test/>}/>
+                        <Route path="/mason" element={<MasonHome/>}/>
+                        <Route path="/mikaela" element={<MikaelaHome/>}/>
                     </Routes>
                 </Router>
             </div>
