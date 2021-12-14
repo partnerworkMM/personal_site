@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react"
+import {BrowserRouter as Router,Route,Link, Redirect} from "react-router-dom"
 import axios from "axios"
 
 function Test(){
@@ -17,6 +18,9 @@ function Test(){
         <div id="test">
             <h1>welcome to personal site</h1>
             <p>{masonTestData.name}</p>
+            <Link to = "/mason">mason</Link>
+            <br/>
+            <Link to = "/mikaela">mikaela</Link>
 
         </div>
     )
